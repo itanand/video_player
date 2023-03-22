@@ -5,11 +5,12 @@ import { BsFillCheckCircleFill } from "react-icons/bs";
 import { AiOutlineLike } from "react-icons/ai";
 import { abbreviateNumber } from "js-abbreviation-number";
 
-import './animation.css';
-
 import { fetchDataFromApi } from "../utils/api";
 import { Context } from "../context/contextApi";
 import SuggestionVideoCard from "./SuggestionVideoCard";
+
+
+import './animation.css';
 
 const VideoDetails = () => {
     const [video, setVideo] = useState();
@@ -52,7 +53,7 @@ const VideoDetails = () => {
                             width="100%"
                             height="100%"
                             style={{ backgroundColor: "#000000" }}
-                            playing={true}
+                            playing={true} // to make auto play
                         />
                     </div>
                     <div className="text-white font-bold text-sm md:text-xl mt-4 line-clamp-2">
@@ -73,10 +74,10 @@ const VideoDetails = () => {
                                     {video?.author?.title}
                                     {video?.author?.badges[0]?.type ===
                                         "VERIFIED_CHANNEL" && (
-                                        <BsFillCheckCircleFill className="text-white/[0.5] text-[12px] ml-1" />
-                                    )}
+                                            <BsFillCheckCircleFill className="text-white/[0.5] text-[12px] ml-1" />
+                                        )}
                                 </div>
-                                <div className="text-white/[0.7] text-sm ">
+                                <div className="text-white/[0.7] text-sm">
                                     {video?.author?.stats?.subscribersText}
                                 </div>
                             </div>

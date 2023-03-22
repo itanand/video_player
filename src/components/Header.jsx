@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
-import Logo from "../assets/logo.svg";
+import Logo from "../images/logo.svg";
 
 
 import { SlMenu } from "react-icons/sl";
