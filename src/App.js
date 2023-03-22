@@ -1,16 +1,15 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Header from "./components/Header/Header";
-import Feed from "./components/Feed/Feed";
-import SearchResult from "./components/Search/SearchResult";
-import VideoDetails from "./components/Video/VideoDetails";
+import Header from "./components/Header";
+import Feed from "./components/Feed";
+import SearchResult from "./components/SearchResult";
+import VideoDetails from "./components/VideoDetails";
 import { AppContext } from "./context/contextApi";
 
-
 const App = () => {
-  return (
-    <AppContext>
+    return (
+        <AppContext>
             <BrowserRouter>
                 <div className="flex flex-col h-full">
                     <Header />
@@ -25,8 +24,11 @@ const App = () => {
                 </div>
             </BrowserRouter>
         </AppContext>
+    );
+};
 
-  )
-}
+export default App;
 
-export default App
+
+// exact - The exact param disables the partial matching for
+// a route and makes sure that it only returns the route if the path is an EXACT match to the current url.
